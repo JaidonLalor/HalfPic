@@ -1,8 +1,14 @@
-// @/config/webpack.main.config.cjs
+// webpack.main.config.cjs
 const path = require('path');
 
 module.exports = {
-  entry: './main.cjs',
+  entry: {
+    main: './main.cjs',
+    preload: './src/preload.cjs'
+  },
+  output: {
+    filename: '[name].js'
+  },
   module: {
     rules: require('./webpack.rules.cjs'),
   },
@@ -13,6 +19,10 @@ module.exports = {
     },
   },
   externals: {
-    electron: 'commonjs electron'
+    electron: 'commonjs electron',
+    path: 'commonjs path',
+    fs: 'commonjs fs',
+    'fs/promises': 'commonjs fs/promises',
+    'child_process': 'commonjs child_process'
   },
 };

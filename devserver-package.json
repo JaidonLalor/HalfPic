@@ -5,7 +5,7 @@
   "main": ".webpack/main/main.js",
   "scripts": {
     "start": "electron-forge start",
-    "build": "webpack --config ./config/webpack.main.config.cjs --mode production",
+    "build": "webpack --mode production",
     "electron": "ELECTRON_IS_DEV=false electron .",
     "electron-dev": "ELECTRON_IS_DEV=true electron-forge start",
     "dev": "ELECTRON_IS_DEV=true NODE_ENV=development concurrently --kill-others \"npm:serve\" \"npm:electron-dev\"",

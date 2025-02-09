@@ -1,9 +1,10 @@
+// forge.config.cjs
 const path = require('path');
 const rootDir = path.resolve(__dirname, '..');
 
 module.exports = {
   packagerConfig: {
-    asar: false,
+    asar: true,
     icon: path.join(rootDir, 'assets', 'icon'),
     name: 'HalfPic',
     platform: ['darwin'],
