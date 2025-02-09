@@ -1,0 +1,24 @@
+//
+//  ContentView.swift
+//  HalfPic
+//
+//  Created by Jaidon Lalor on 2/8/25.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
